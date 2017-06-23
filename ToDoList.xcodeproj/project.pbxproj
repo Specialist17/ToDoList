@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900056411EFD89D5007B9B2F /* ToDoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900056401EFD89D5007B9B2F /* ToDoCollectionCell.swift */; };
 		9079CE8B1EFCA1D6001A9D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079CE8A1EFCA1D6001A9D57 /* AppDelegate.swift */; };
-		9079CE8D1EFCA1D6001A9D57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079CE8C1EFCA1D6001A9D57 /* ViewController.swift */; };
+		9079CE8D1EFCA1D6001A9D57 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079CE8C1EFCA1D6001A9D57 /* ToDoListVC.swift */; };
 		9079CE901EFCA1D6001A9D57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9079CE8E1EFCA1D6001A9D57 /* Main.storyboard */; };
 		9079CE931EFCA1D6001A9D57 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9079CE911EFCA1D6001A9D57 /* ToDoList.xcdatamodeld */; };
 		9079CE951EFCA1D6001A9D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9079CE941EFCA1D6001A9D57 /* Assets.xcassets */; };
 		9079CE981EFCA1D6001A9D57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9079CE961EFCA1D6001A9D57 /* LaunchScreen.storyboard */; };
+		9079CEA41EFCA333001A9D57 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079CEA31EFCA333001A9D57 /* ToDoCell.swift */; };
+		9079CEA61EFCA937001A9D57 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079CEA51EFCA937001A9D57 /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		900056401EFD89D5007B9B2F /* ToDoCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCollectionCell.swift; sourceTree = "<group>"; };
 		9079CE871EFCA1D6001A9D57 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9079CE8A1EFCA1D6001A9D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9079CE8C1EFCA1D6001A9D57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9079CE8C1EFCA1D6001A9D57 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
 		9079CE8F1EFCA1D6001A9D57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9079CE921EFCA1D6001A9D57 /* ToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList.xcdatamodel; sourceTree = "<group>"; };
 		9079CE941EFCA1D6001A9D57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9079CE971EFCA1D6001A9D57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9079CE991EFCA1D6001A9D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9079CEA31EFCA333001A9D57 /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		9079CEA51EFCA937001A9D57 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		9079CE891EFCA1D6001A9D57 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				9079CEA21EFCA23D001A9D57 /* Helpers */,
+				9079CEA11EFCA233001A9D57 /* Model */,
+				9079CEA01EFCA22E001A9D57 /* View */,
+				9079CE9F1EFCA222001A9D57 /* Controller */,
 				9079CE8A1EFCA1D6001A9D57 /* AppDelegate.swift */,
-				9079CE8C1EFCA1D6001A9D57 /* ViewController.swift */,
 				9079CE8E1EFCA1D6001A9D57 /* Main.storyboard */,
 				9079CE941EFCA1D6001A9D57 /* Assets.xcassets */,
 				9079CE961EFCA1D6001A9D57 /* LaunchScreen.storyboard */,
 				9079CE991EFCA1D6001A9D57 /* Info.plist */,
-				9079CE911EFCA1D6001A9D57 /* ToDoList.xcdatamodeld */,
 			);
 			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		9079CE9F1EFCA222001A9D57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9079CE8C1EFCA1D6001A9D57 /* ToDoListVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9079CEA01EFCA22E001A9D57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9079CEA31EFCA333001A9D57 /* ToDoCell.swift */,
+				9079CEA51EFCA937001A9D57 /* MaterialView.swift */,
+				900056401EFD89D5007B9B2F /* ToDoCollectionCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9079CEA11EFCA233001A9D57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9079CE911EFCA1D6001A9D57 /* ToDoList.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9079CEA21EFCA23D001A9D57 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9079CE8D1EFCA1D6001A9D57 /* ViewController.swift in Sources */,
+				9079CE8D1EFCA1D6001A9D57 /* ToDoListVC.swift in Sources */,
 				9079CE931EFCA1D6001A9D57 /* ToDoList.xcdatamodeld in Sources */,
+				9079CEA61EFCA937001A9D57 /* MaterialView.swift in Sources */,
+				900056411EFD89D5007B9B2F /* ToDoCollectionCell.swift in Sources */,
 				9079CE8B1EFCA1D6001A9D57 /* AppDelegate.swift in Sources */,
+				9079CEA41EFCA333001A9D57 /* ToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +352,7 @@
 				9079CE9E1EFCA1D6001A9D57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

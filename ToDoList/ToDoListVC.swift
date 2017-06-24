@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ToDoListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-//    @IBOutlet weak var toDoTableView: UITableView!
+
+class ToDoListVC: UIViewController, UICollectionViewDelegateFlowLayout {
+
     @IBOutlet weak var toDoCollectionView: UICollectionView!
+    
+    fileprivate var collectionViewLayout: HorizontalScroll!
     
     var toDos: [ToDo]?
     
@@ -21,6 +24,11 @@ class ToDoListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         
         toDoCollectionView.dataSource = self
         toDoCollectionView.delegate = self
+        
+        toDoCollectionView.showsHorizontalScrollIndicator = false
+        toDoCollectionView.isPagingEnabled = false
+        
+        self.collectionViewLayout = HorizontalScroll.configureLayout(self.toDoCollectionView, itemSize: CGSize(width: toDoCollectionView.frame.width, height: toDoCollectionView.frame.height), minimumLineSpacing: 10)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,22 +37,22 @@ class ToDoListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
+}
+
+
+extension ToDoListVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "toDoCollectionCell", for: indexPath) as? ToDoCollectionCell {
-            
             cell.configureCell()
             return cell
         } else {
-           
-            
             return UICollectionViewCell()
         }
-
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "toDoCollectionCell", for: indexPath)
-//        
-//        return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -54,6 +62,5 @@ class ToDoListVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
-
 }
 
